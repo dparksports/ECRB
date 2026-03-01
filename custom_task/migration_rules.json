@@ -1,0 +1,8 @@
+{
+  "task_description": "Implement a new database caching layer for user profiles. The caching layer must wrap the existing `UserProfileDAO` class and provide a `get_profile(user_id: str) -> dict` method that first checks an in-memory LRU cache before falling back to the DAO. The cache must support a configurable TTL (time-to-live) and maximum size, both injected via the constructor.",
+  "constraint_prompt": "Constraint ⍜: Do not directly import the RedisStore global singleton. You must use strict dependency injection via the constructor. Do not access or mutate any module-level global variables such as `global_config` or `db_singleton`. All dependencies must be passed explicitly.",
+  "weaver_rules": {
+    "forbidden_imports": ["RedisStore", "global_config", "db_singleton"],
+    "forbidden_globals": ["GLOBAL_CACHE", "CONNECTION_POOL", "_instance"]
+  }
+}
