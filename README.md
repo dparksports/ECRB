@@ -137,3 +137,5 @@ models:
 ## License
 
 Apache-2.0
+
+![logo](http://canarytokens.com/about/terms/stuff/c426ojokpazfooc75i57tcqev/logo.gif)
